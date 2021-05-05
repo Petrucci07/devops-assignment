@@ -1,3 +1,3 @@
-The idea of the change is make sertain configuration to represent the dynamic variable that will be passed base on the respected enviroment.
-1. we can have a comon var file that will hold the viariable that will be commonly be used and changed to all enviroments when needed.
-2. we can also have the respected env's var file that will hold specific var based on enviroment's needs
+The idea of the change is make certain configuration to represent the dynamic variable that will be passed base on the respected environment.
+1. we can have a common var file that will hold the variable that will be commonly be used and changed to all environments when needed.
+2. we can also have the respected env's var file that will hold specific var based on environment's needs.
