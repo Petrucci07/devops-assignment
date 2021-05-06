@@ -6,3 +6,16 @@ Also we can make certain configuration to represent the dynamic variable that wi
 
 For now, only a couble of variable have been used as an example of how we can set the difference between a prod env and other envs. 
 With this change we could have version and configurations changed on specifig environment without effecting our production configuration.
+
+
+Changes done:
+
+dev.tfvars : Created, hold env specifig config/variables
+production.tfvars : Created, hold env specifig config/variables
+stage.tfvars : Created, hold env specifig config/variables
+variables.tf : Created, hold common config/variables
+
+crminfra.tf : Changed 
+line 18-19: Value changed to variable to adjust based on enviroment
+line 43: changed for hardcoded value to dynimic value based on workspace
+line 142-144: Moved to variables.tf to be used as defult unless is specified in it's reespective XXX.tfvars
