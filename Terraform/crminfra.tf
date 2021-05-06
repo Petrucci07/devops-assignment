@@ -7,6 +7,7 @@ resource "random_string" "password" {
 }
 
 #Need a postgres
+#Target servers could varrie based on environment. I will simply use name and location of azurerm_postgresql_server psql_db as it differenciate based on environment
 variable "psql_storage" {
   default = ""
 }
@@ -14,8 +15,8 @@ variable "crm-resource_group_name" {
   default = ""
 }
 resource "azurerm_postgresql_server" "psql_db" {
-  name                = "postgresql-server-cliient1"
-  location            = "west-europe"
+  name                = var.psql_server.name
+  location            = var.psql_server.location
   resource_group_name = var.crm-resource_group_name
 
   sku {
@@ -39,7 +40,7 @@ resource "azurerm_postgresql_server" "psql_db" {
 
   tags = {
     Product = "CRM"
-    environment = "Production"
+    environment = "${terraform.workspace}"
     type = "database"
     resource = "postgres"
     client = "cliient1"
@@ -136,9 +137,11 @@ resource "azurerm_cdn_endpoint" "admin-cdn-endpoint" {
   optimization_type = "GeneralWebDelivery"
 }
 
-variable "subscription_id" {
-  default = "aaaaaaa-bbb-ccccc-ccc-dddddddd"
-}
+#subscription_id could varie based on env
+
+#variable "subscription_id" {
+#  default = "aaaaaaa-bbb-ccccc-ccc-dddddddd"
+#}
 
 resource "null_resource" "admin-azure-cdn-rules" {
   provisioner "local-exec" {
