@@ -10,12 +10,12 @@ With this change we could have version and configurations changed on specifig en
 
 Changes done:
 
-dev.tfvars : Created, hold env specifig config/variables
-production.tfvars : Created, hold env specifig config/variables
-stage.tfvars : Created, hold env specifig config/variables
-variables.tf : Created, hold common config/variables
+1. dev.tfvars : Created, hold env specifig config/variables
+2. production.tfvars : Created, hold env specifig config/variables
+3. stage.tfvars : Created, hold env specifig config/variables
+4. variables.tf : Created, hold common config/variables
 
-crminfra.tf : Changed 
-line 18-19: Value changed to variable to adjust based on enviroment
-line 43: changed for hardcoded value to dynimic value based on workspace
-line 142-144: Moved to variables.tf to be used as defult unless is specified in it's reespective XXX.tfvars
+5. crminfra.tf : Changed 
+line 18-19: Value changed to variable to adjust based on enviroment.
+line 43: changed for hardcoded value to dynimic value based on workspace.
+line 142-144: Moved to variables.tf to be used as defult unless is specified in it's reespective XXX.tfvars.
