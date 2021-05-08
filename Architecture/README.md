@@ -37,7 +37,10 @@
 ----------------------------------------------------------------
 
 
-The system can be replicated base on the usage. Proper planing must be done in case of increasment of the systems functionalities and purposes.
-Issue that could rise is on multible usage of the user, but we could handle it by scalling it up.
-Of course User Authendication should be able to identify whether it has multible simotanius logins.
-The desing is based on biger usage so, if we have fower audiance, it will cost way more than needed to keep up with the desceased numbers.
+- The system can be replicated base on the usage. Proper planing must be done in case of increasment of the systems functionalities and purposes.
+
+- Issue that could rise is on multible usage of the user, but we could handle it by scalling it up.
+
+- Of course User Authendication should be able to identify whether it has multible simotanius logins.
+
+- The desing is based on biger usage so, if we have fower audiance, it will cost way more than needed to keep up with the desceased numbers.
